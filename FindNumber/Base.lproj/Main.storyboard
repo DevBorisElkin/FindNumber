@@ -145,10 +145,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9Ga-4r-wAX">
-                                <rect key="frame" x="123.66666666666669" y="370" width="167" height="210"/>
+                                <rect key="frame" x="65.666666666666657" y="330" width="282.66666666666674" height="290"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iQ-XC-YS1">
-                                        <rect key="frame" x="0.0" y="0.0" width="167" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="New Game" titleAlignment="center">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
@@ -157,22 +157,35 @@
                                             <segue destination="9aE-i3-Bnm" kind="show" id="1Xc-TE-6Wa"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhG-lz-ulZ">
-                                        <rect key="frame" x="0.0" y="80" width="167" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozd-Fg-Um0">
+                                        <rect key="frame" x="0.0" y="80" width="282" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Settings" titleAlignment="center">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="mKr-IX-3AN" kind="show" id="grv-u2-Y5a"/>
+                                            <segue destination="Fem-TP-Uzg" kind="show" id="2GG-qm-3q3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3Y-Qr-q3A">
-                                        <rect key="frame" x="0.0" y="160" width="167" height="50"/>
+                                        <rect key="frame" x="0.0" y="160" width="282" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="High Score" titleAlignment="center">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="sh9-gA-WNJ" kind="show" id="4Yh-gl-rTj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhG-lz-ulZ">
+                                        <rect key="frame" x="0.0" y="240" width="282" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Different Controllers" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="mKr-IX-3AN" kind="show" id="grv-u2-Y5a"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -189,6 +202,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRq-cQ-TkB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-223.18840579710147" y="-35.491071428571423"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="BTg-YI-GJD">
+            <objects>
+                <tableViewController id="Fem-TP-Uzg" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Zv9-3q-zWp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="k2j-mi-fhQ">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k2j-mi-fhQ" id="S6L-wi-uNo">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Fem-TP-Uzg" id="XGp-08-Zpd"/>
+                            <outlet property="delegate" destination="Fem-TP-Uzg" id="wgs-WF-fRD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="MEk-MY-4Mx"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXB-Li-Ffz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223" y="683"/>
+        </scene>
+        <!--High Score-->
+        <scene sceneID="pTz-nA-WmQ">
+            <objects>
+                <viewController id="sh9-gA-WNJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ht4-hq-NaL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jtR-Wi-a4s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="High Score" id="vRF-cw-g4d"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqo-A1-cvg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="682"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="rQE-oT-0PR">
