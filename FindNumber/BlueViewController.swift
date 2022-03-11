@@ -12,14 +12,21 @@ class BlueViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        TransferedDataLabel.text = transferedDataText
     }
     
     @IBAction func OpenGreenScreen(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var controller = storyboard.instantiateViewController(withIdentifier: "GreenScreen")
-        controller.title = "Green"
-        self.navigationController?.pushViewController(controller, animated: true)
+        if var controller = storyboard.instantiateViewController(withIdentifier: "GreenScreen") as? GreenViewController{
+            controller.textForLabel = "Wow message transfered!"
+            
+            controller.title = "Green"
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
     }
+    
+    var transferedDataText:String = ""
+    
+    @IBOutlet weak var TransferedDataLabel: UILabel!
     
 }

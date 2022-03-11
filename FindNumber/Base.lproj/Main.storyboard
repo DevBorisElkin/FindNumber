@@ -52,6 +52,22 @@
                     <view key="view" contentMode="scaleToFill" id="4RG-2y-bkX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Transfered data:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avR-54-vTT">
+                                <rect key="frame" x="78" y="220" width="259" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBv-Ff-Ldo">
+                                <rect key="frame" x="78" y="274" width="259" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cGk-NM-c7S"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
@@ -62,10 +78,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="TransferedDataLabel" destination="NBv-Ff-Ldo" id="Zmm-Ac-fNL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fwd-Qd-BTT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-357" y="-747"/>
+            <point key="canvasLocation" x="-357.97101449275362" y="-747.32142857142856"/>
         </scene>
         <!--Green View Controller-->
         <scene sceneID="0Po-if-8Yr">
@@ -98,14 +117,24 @@
                                     <action selector="ToYellowMenu:" destination="bRU-6l-eML" eventType="touchUpInside" id="Si0-tK-aDM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TextPlaceholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0X-XN-Utz">
+                                <rect key="frame" x="99" y="156" width="216" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uGm-Po-Jzq"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
+                    <connections>
+                        <outlet property="TextPlaceholder" destination="d0X-XN-Utz" id="efJ-qQ-GbV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4TA-du-r4e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="445" y="-747"/>
+            <point key="canvasLocation" x="444.92753623188412" y="-747.32142857142856"/>
         </scene>
         <!--Menu-->
         <scene sceneID="OQb-nh-xm8">

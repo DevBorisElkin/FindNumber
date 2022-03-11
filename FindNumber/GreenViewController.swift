@@ -9,10 +9,14 @@ import UIKit
 
 class GreenViewController: UIViewController {
 
+    var textForLabel = ""
+    
+    @IBOutlet weak var TextPlaceholder: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        TextPlaceholder.text = textForLabel
     }
     
     @IBAction func GoToRoot(_ sender: Any) {
