@@ -90,7 +90,7 @@ class GameViewController: UIViewController {
     }
     
     private func updateInfoGame(with status:GameStatus){
-        print("updateInfoGame: \(status)")
+        //print("updateInfoGame: \(status)")
         switch status {
         case .start:
             GameStatus.isHidden = false
