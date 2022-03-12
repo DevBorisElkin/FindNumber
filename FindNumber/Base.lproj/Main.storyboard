@@ -174,7 +174,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="sh9-gA-WNJ" kind="show" id="4Yh-gl-rTj"/>
+                                            <segue destination="S3d-P9-dqA" kind="presentation" modalPresentationStyle="fullScreen" id="4Yh-gl-rTj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhG-lz-ulZ">
@@ -320,7 +320,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXB-Li-Ffz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-223" y="686"/>
+            <point key="canvasLocation" x="686.95652173913049" y="685.71428571428567"/>
         </scene>
         <!--Select Time View Controller-->
         <scene sceneID="sOS-PT-rkR">
@@ -374,23 +374,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyL-OQ-IwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="627.536231884058" y="685.71428571428567"/>
+            <point key="canvasLocation" x="1537.68115942029" y="685.71428571428567"/>
         </scene>
         <!--High Score-->
         <scene sceneID="pTz-nA-WmQ">
             <objects>
-                <viewController id="sh9-gA-WNJ" sceneMemberID="viewController">
+                <viewController id="sh9-gA-WNJ" customClass="HighScoreViewController" customModule="FindNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ht4-hq-NaL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="High Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="GDe-K1-9so">
+                                <rect key="frame" x="100" y="316" width="215" height="68"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="777" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="xyL-4j-yjJ">
+                                <rect key="frame" x="100" y="387" width="215" height="68"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jtR-Wi-a4s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GDe-K1-9so" firstAttribute="centerY" secondItem="jtR-Wi-a4s" secondAttribute="centerY" constant="-54" id="Sfg-XE-fJN"/>
+                            <constraint firstItem="xyL-4j-yjJ" firstAttribute="leading" secondItem="jtR-Wi-a4s" secondAttribute="leading" constant="100" id="V5d-K7-NFa"/>
+                            <constraint firstItem="GDe-K1-9so" firstAttribute="centerX" secondItem="jtR-Wi-a4s" secondAttribute="centerX" id="ZEH-Ew-iid"/>
+                            <constraint firstItem="xyL-4j-yjJ" firstAttribute="leading" secondItem="GDe-K1-9so" secondAttribute="leading" id="aHa-Oh-H9r"/>
+                            <constraint firstItem="jtR-Wi-a4s" firstAttribute="bottom" secondItem="xyL-4j-yjJ" secondAttribute="bottom" constant="353" id="eo1-KL-sdu"/>
+                            <constraint firstItem="xyL-4j-yjJ" firstAttribute="trailing" secondItem="GDe-K1-9so" secondAttribute="trailing" id="ibp-Up-TMb"/>
+                            <constraint firstItem="xyL-4j-yjJ" firstAttribute="top" secondItem="GDe-K1-9so" secondAttribute="bottom" constant="3" id="rg1-xa-oH6"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="High Score" id="vRF-cw-g4d"/>
+                    <navigationItem key="navigationItem" title="High Score" id="vRF-cw-g4d">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="JqH-xH-G1G">
+                            <connections>
+                                <action selector="CloseHighScore:" destination="sh9-gA-WNJ" id="mJr-aL-Bor"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="recordlabel" destination="xyL-4j-yjJ" id="Qyq-Y3-6D1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqo-A1-cvg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1142" y="686"/>
+            <point key="canvasLocation" x="-231.8840579710145" y="685.71428571428567"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="rQE-oT-0PR">
@@ -696,6 +728,7 @@
                         <outletCollection property="ButtonsCollection" destination="kHe-36-jIC" collectionClass="NSMutableArray" id="bHL-w5-cSF"/>
                         <outletCollection property="ButtonsCollection" destination="2oh-Ss-hVj" collectionClass="NSMutableArray" id="Fjw-9b-YC8"/>
                         <outletCollection property="ButtonsCollection" destination="4d3-8q-0oj" collectionClass="NSMutableArray" id="MDl-Gb-x0b"/>
+                        <segue destination="S3d-P9-dqA" kind="presentation" identifier="recordVC" modalPresentationStyle="fullScreen" id="8Fy-OR-dR3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8g-tt-UgJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -720,7 +753,28 @@
             </objects>
             <point key="canvasLocation" x="-1133.3333333333335" y="-35.491071428571423"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kwT-rX-kU8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S3d-P9-dqA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="If5-Ez-DeI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sh9-gA-WNJ" kind="relationship" relationship="rootViewController" id="GDN-Ig-A4B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOy-Mv-oNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1142.0289855072465" y="685.71428571428567"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8Fy-OR-dR3"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="1000" height="1333"/>
         <systemColor name="systemBackgroundColor">

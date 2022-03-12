@@ -134,7 +134,7 @@ class GameViewController: UIViewController {
             self?.setUpScreen()
         }
         let showRecord = UIAlertAction(title: "Check record", style: .default) { [weak self](_) in
-            // TODO: - RECORD VIEW CONTROLLER
+            self?.performSegue(withIdentifier: "recordVC", sender: nil)
         }
         let menuAction = UIAlertAction(title: "Go to menu", style: .destructive) { [weak self] (_) in
             self?.navigationController?.popViewController(animated: true)
@@ -148,9 +148,14 @@ class GameViewController: UIViewController {
         
         // решение для iPad т.к. экран слишком большой и модальному окошку нужно к чему-то "привязываться"
         if let popover = alert.popoverPresentationController{
-            popover.sourceView = self.view
-            popover.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-            popover.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0) // "выключение" стрелочки
+            
+            // привязанное к элементу UI
+            popover.sourceView = GameStatus
+            
+            // не привязанное к элементу UI
+            //popover.sourceView = self.view
+            //popover.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            //popover.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0) // "выключение" стрелочки
         }
         
         present(alert, animated: true, completion: nil)
