@@ -229,6 +229,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hru-ni-M6Y">
                                                     <rect key="frame" x="345" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+                                                    <connections>
+                                                        <action selector="changeTimerState:" destination="Fem-TP-Uzg" eventType="valueChanged" id="Wxf-g8-mFe"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -282,6 +285,9 @@
                                                     <rect key="frame" x="109" y="6.3333333333333321" width="198" height="30.999999999999996"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Restore to Default Settings"/>
+                                                    <connections>
+                                                        <action selector="RestoreToDefaultSettings:" destination="Fem-TP-Uzg" eventType="touchUpInside" id="ejM-DY-RKp"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -307,6 +313,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="MEk-MY-4Mx"/>
+                    <connections>
+                        <outlet property="switchTimer" destination="hru-ni-M6Y" id="cTf-ks-tPE"/>
+                        <outlet property="timeGamelabel" destination="d9P-7Z-8tG" id="aPA-X6-WhM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXB-Li-Ffz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -23,8 +23,11 @@ class GameViewController: UIViewController {
         setUpScreen()
     }
     
-    lazy var game:Game = Game(countItems: ButtonsCollection.count, time: 30) { [weak self] (statusGame, seconds) in
+    lazy var game:Game = Game(countItems: ButtonsCollection.count, time: Settings.shared.currentSettings.timeForGame, timerEnabled: Settings.shared.currentSettings.timerState) { [weak self] (statusGame, seconds) in
+        
+        //guard Settings.shared.currentSettings.timerState else {return}
         guard let self = self else {return}
+        
         self.TimerLabel.text = seconds.secondsToString()
         self.updateInfoGame(with: statusGame)
     }
@@ -33,6 +36,11 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         setUpScreen()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        game.stopGame()
     }
     
     @IBAction func pressButton(_ sender: UIButton) {
@@ -51,6 +59,9 @@ class GameViewController: UIViewController {
         NewGameBtn.isHidden = true
         NextDigit.isHidden = false
         NextDigit.text = game.nextItem?.title
+        
+        self.TimerLabel.isHidden = !Settings.shared.currentSettings.timerState
+        updateUI()
     }
     
     private func updateUI(){
@@ -71,10 +82,19 @@ class GameViewController: UIViewController {
         NextDigit.text = game.nextItem?.title
         
         updateInfoGame(with: game.gameStatus)
+        //checkUIEnabled()
     }
+    
+    func checkUIEnabled(){
+        print("NextDigit.isHidden:\(NextDigit.isHidden) NextDigit.isEnabled: \(NextDigit.isEnabled), NextDigit.text:\(NextDigit.text)")
+    }
+    
     private func updateInfoGame(with status:GameStatus){
+        print("updateInfoGame: \(status)")
         switch status {
         case .start:
+            GameStatus.isHidden = false
+            GameStatus.isEnabled = true
             GameStatus.text = "The Game Started!"
             GameStatus.textColor = .black
             NextDigit.isHidden = false

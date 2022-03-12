@@ -28,21 +28,6 @@ class SelectTimeViewController: UIViewController, UITableViewDelegate/*, UITable
     }
     // third way - table view - right click long drag & drop onto
     // scuare view button, and select 'data source'
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        UserDefaults.standard.setValue(data[indexPath.row], forKey: "timeForGame")
-        
-        // get data from UserDefaults
-        //UserDefaults.standard.integer(forKey: "timeForGame") // standard empty = 0
-        //UserDefaults.standard.float(forKey: "timeForGame") // standard empty = 0.0
-        //UserDefaults.standard.object(forKey: "timeForGame") // standard empty = nil
-        
-        
-        print(indexPath.row)
-    }
-    
 }
 
 extension SelectTimeViewController: UITableViewDataSource{
@@ -56,8 +41,23 @@ extension SelectTimeViewController: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "timeCell", for: indexPath)
-        
         cell.textLabel?.text = "\(data[indexPath.row])"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        //UserDefaults.standard.setValue(data[indexPath.row], forKey: "timeForGame")
+        
+        // get data from UserDefaults
+        //UserDefaults.standard.integer(forKey: "timeForGame") // standard empty = 0
+        //UserDefaults.standard.float(forKey: "timeForGame") // standard empty = 0.0
+        //UserDefaults.standard.object(forKey: "timeForGame") // standard empty = nil
+        
+        Settings.shared.currentSettings.timeForGame = data[indexPath.row]
+        navigationController?.popViewController(animated: true)
+        
+        print(data[indexPath.row])
+    }    
 }
