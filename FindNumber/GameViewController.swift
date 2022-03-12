@@ -104,11 +104,55 @@ class GameViewController: UIViewController {
             GameStatus.textColor = .red
             NextDigit.isHidden = true
             NewGameBtn.isHidden = false
+            showAlertActionSheet()
         case .win:
             GameStatus.text = "You Have Won!"
             GameStatus.textColor = .green
             NextDigit.isHidden = true
             NewGameBtn.isHidden = false
+            
+            if(game.isNewRecord){
+                showAlert()
+            }else{
+                showAlertActionSheet()
+            }
         }
+    }
+    private func showAlert(){
+        let alert = UIAlertController(title: "New Record", message: "you have set new record!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Okay", style: .default){ [weak self] (variable) in
+            print("Closed alert")
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
+    private func showAlertActionSheet(){
+        let alert = UIAlertController(title: "What you want to do next?", message: nil, preferredStyle: .actionSheet)
+        let newGameAction = UIAlertAction(title: "Start new game", style: .default) { [weak self] UIAlertAction in
+            self?.game.newGame()
+            self?.setUpScreen()
+        }
+        let showRecord = UIAlertAction(title: "Check record", style: .default) { [weak self](_) in
+            // TODO: - RECORD VIEW CONTROLLER
+        }
+        let menuAction = UIAlertAction(title: "Go to menu", style: .destructive) { [weak self] (_) in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alert.addAction(newGameAction)
+        alert.addAction(showRecord)
+        alert.addAction(menuAction)
+        alert.addAction(cancelAction)
+        
+        // решение для iPad т.к. экран слишком большой и модальному окошку нужно к чему-то "привязываться"
+        if let popover = alert.popoverPresentationController{
+            popover.sourceView = self.view
+            popover.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popover.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0) // "выключение" стрелочки
+        }
+        
+        present(alert, animated: true, completion: nil)
     }
 }

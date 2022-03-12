@@ -9,6 +9,7 @@ import Foundation
 
 enum KeysUserDefaults{
     static let settingsGame = "settingsGame"
+    static let recordGame = "recordGame"
 }
 
 // struct SettingsGame: Deconable, Encodable // можно записать так, но протокол Codable

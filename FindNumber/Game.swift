@@ -29,9 +29,22 @@ class Game{
     
     private var countItems:Int
     
+    var isNewRecord = false
+    
     var gameStatus:GameStatus = .start{
         didSet{
             if (gameStatus == .win || gameStatus == .fail){ // if status != .start
+                
+                if(gameStatus == .win && Settings.shared.currentSettings.timerState){
+                    let newRecord = timeForGame - secondsGame
+                    
+                    let record = UserDefaults.standard.integer(forKey: KeysUserDefaults.recordGame)
+                    if(record == 0 || (newRecord < record)){
+                        UserDefaults.standard.set(newRecord, forKey: KeysUserDefaults.recordGame)
+                        isNewRecord = true
+                    }
+                }
+                
                 stopGame()
             }
         }
@@ -63,6 +76,7 @@ class Game{
     }
     
     private func setUpGame(){
+        isNewRecord = false
         var digits = data.shuffled()
         items = [Item]()
         
