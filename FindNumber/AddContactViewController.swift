@@ -33,7 +33,14 @@ class AddContactViewController: UIViewController {
     
     @IBAction func SaveButtonClicked(_ sender: Any) {
         print("SaveButtonClicked. name:\(NameInputField.text), phone number:\(PhoneNumberInputField.text)")
+        
+        var newContact = Contact(contactName: NameInputField.text!, contactNumber: PhoneNumberInputField.text!)
+        delegate?.addNew(newContact)
     }
+    
+    // *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+    
+    weak var delegate:ContactsDelegate?
     
 }
 
