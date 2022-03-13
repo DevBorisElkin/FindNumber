@@ -9,21 +9,31 @@ import UIKit
 
 class AddContactViewController: UIViewController {
 
+    
+    @IBOutlet weak var NameInputField: UITextField!
+    
+    @IBOutlet weak var PhoneNumberInputField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        NameInputField.delegate = self
+        PhoneNumberInputField.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        PhoneNumberInputField.resignFirstResponder()
     }
-    */
+    
+    @IBAction func SaveButtonClicked(_ sender: Any) {
+        print("SaveButtonClicked. name:\(NameInputField.text), phone number:\(PhoneNumberInputField.text)")
+    }
+    
+}
 
+extension AddContactViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
