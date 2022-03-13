@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6321B66C27DE449000A5369E /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6321B66B27DE449000A5369E /* ContactsViewController.swift */; };
+		6321B66E27DE44DE00A5369E /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6321B66D27DE44DE00A5369E /* AddContactViewController.swift */; };
 		632D6A4027D2B5D700378C6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D6A3F27D2B5D700378C6B /* AppDelegate.swift */; };
 		632D6A4727D2B5D700378C6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632D6A4527D2B5D700378C6B /* Main.storyboard */; };
 		632D6A4927D2B5D900378C6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632D6A4827D2B5D900378C6B /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6321B66B27DE449000A5369E /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		6321B66D27DE44DE00A5369E /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		632D6A3C27D2B5D700378C6B /* FindNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		632D6A3F27D2B5D700378C6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		632D6A4627D2B5D700378C6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				6339C82927DCCD17003BC248 /* SelectTimeViewController.swift */,
 				6339C82B27DCF0C9003BC248 /* Settings.swift */,
 				6339C82D27DD2427003BC248 /* HighScoreViewController.swift */,
+				6321B66B27DE449000A5369E /* ContactsViewController.swift */,
+				6321B66D27DE44DE00A5369E /* AddContactViewController.swift */,
 			);
 			path = FindNumber;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6398DA3C27DA945500FB4019 /* GreenViewController.swift in Sources */,
+				6321B66C27DE449000A5369E /* ContactsViewController.swift in Sources */,
 				6339C82E27DD2427003BC248 /* HighScoreViewController.swift in Sources */,
 				6398DA3827DA8C8200FB4019 /* YellowViewController.swift in Sources */,
 				633B82B627D54E4300AE6F63 /* GameViewController.swift in Sources */,
@@ -167,6 +174,7 @@
 				633B82B827D7934A00AE6F63 /* Game.swift in Sources */,
 				6398DA3A27DA8E1B00FB4019 /* BlueViewController.swift in Sources */,
 				6339C82C27DCF0C9003BC248 /* Settings.swift in Sources */,
+				6321B66E27DE44DE00A5369E /* AddContactViewController.swift in Sources */,
 				632D6A4027D2B5D700378C6B /* AppDelegate.swift in Sources */,
 				6339C82A27DCCD17003BC248 /* SelectTimeViewController.swift in Sources */,
 			);
