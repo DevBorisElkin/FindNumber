@@ -36,16 +36,32 @@ class TestEditorMarks{
     // TODO: learn Swift every day
     
     /**
-        Does some cool things
-     -parameter x: Amount of people
-     -parameter z: Does the crowd is multicultural
-     -returns:  Sum of people
+     Does some cool things
+     - parameter x: Amount of people
+     - parameter z: Does the crowd is multicultural
+     - returns:  Sum of people
+     
+     - # First Discussion Header
+        Some text text text text and so on
+        and on and on...
+        and some **bold description**
+     - # Second Discussion Header
+        Discussion header explanation
+     - # Third discussion header without explanation
+     
+      More space for text.
+     Here is description and a web link [google](https://google.com)
      */
     func TestFunc(x: Int, y: Int, z: Bool) -> Int{
         return 0
     }
     
+    func TestFunc_4(x: Int, y: Int, z: Bool) -> Int{
+        return 0
+    }
+    
     func TestFunc_2() -> Int{
+        TestFunc(x: 1, y: 2, z: true)
         return 5
     }
     
