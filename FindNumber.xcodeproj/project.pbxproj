@@ -22,6 +22,7 @@
 		6398DA3827DA8C8200FB4019 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398DA3727DA8C8200FB4019 /* YellowViewController.swift */; };
 		6398DA3A27DA8E1B00FB4019 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398DA3927DA8E1B00FB4019 /* BlueViewController.swift */; };
 		6398DA3C27DA945500FB4019 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398DA3B27DA945500FB4019 /* GreenViewController.swift */; };
+		63A1F95127E1210E00F69358 /* TestEditorMarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1F95027E1210E00F69358 /* TestEditorMarks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		6398DA3727DA8C8200FB4019 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		6398DA3927DA8E1B00FB4019 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		6398DA3B27DA945500FB4019 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		63A1F95027E1210E00F69358 /* TestEditorMarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEditorMarks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		632D6A3327D2B5D700378C6B = {
 			isa = PBXGroup;
 			children = (
+				63A1F95027E1210E00F69358 /* TestEditorMarks.swift */,
 				632D6A3E27D2B5D700378C6B /* FindNumber */,
 				632D6A3D27D2B5D700378C6B /* Products */,
 			);
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A1F95127E1210E00F69358 /* TestEditorMarks.swift in Sources */,
 				6398DA3C27DA945500FB4019 /* GreenViewController.swift in Sources */,
 				6321B66C27DE449000A5369E /* ContactsViewController.swift in Sources */,
 				6339C82E27DD2427003BC248 /* HighScoreViewController.swift in Sources */,
